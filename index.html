@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Campus Pulse</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- NAVIGATION -->
+
+<header>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            Campus<span>Pulse</span>
+        </div>
+
+
+        <div class="nav-links">
+
+            <a href="#home">Home</a>
+
+            <a href="#issues">Issues</a>
+
+            <a href="#ideas">Ideas</a>
+
+            <a href="#manifesto">Manifesto</a>
+
+            <a href="#dashboard">Dashboard</a>
+
+            <a href="#track">Track Issue</a>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+
+<!-- HERO -->
+
+<section id="home"
+         class="hero">
+
+    <div class="hero-content">
+
+        <p class="small-title">
+            YOUR CAMPUS • YOUR VOICE
+        </p>
+
+
+        <h1>
+            Make Your Campus
+            <span>Better.</span>
+        </h1>
+
+
+        <p class="hero-text">
+
+            A simple platform for students
+            to share problems, ideas and
+            questions about campus life.
+
+        </p>
+
+
+        <div class="hero-buttons">
+
+            <a href="#issues"
+               class="btn primary">
+
+                Report an Issue
+
+            </a>
+
+
+            <a href="#ideas"
+               class="btn secondary">
+
+                Share an Idea
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- FEATURES -->
+
+<section class="features">
+
+    <h2>
+        Student Voice
+    </h2>
+
+
+    <p class="section-text">
+
+        Tell us what matters to you.
+
+    </p>
+
+<section id="dashboard" class="dashboard-section">
+
+    <div class="dashboard-content">
+
+        <h2>CampusPulse Dashboard</h2>
+
+        <p>
+            See how student concerns and ideas are being tracked.
+        </p>
+
+
+        <div class="dashboard-grid">
+            <section id="track" class="track-section">
+
+    <div class="track-content">
+
+        <h2>Track Your Issue</h2>
+
+        <p>
+            Enter your Issue ID to check the current status.
+        </p>
+
+
+        <form id="trackForm">
+
+            <input
+                type="text"
+                id="issueId"
+                placeholder="Enter Issue ID (e.g. CP001)"
+                required
+            >
+
+            <button type="submit">
+                Check Status
+            </button>
+
+        </form>
+
+
+        <div id="trackResult"></div>
+
+    </div>
+
+</section>
+
+
+            <!-- Issues -->
+
+            <div class="dashboard-card">
+
+                <div class="dashboard-icon">
+                    🚨
+                </div>
+
+                <h3 id="totalIssues">
+                    -
+                </h3>
+
+                <p>
+                    Issues Reported
+                </p>
+
+            </div>
+
+
+            <!-- Resolved -->
+
+            <div class="dashboard-card">
+
+                <div class="dashboard-icon">
+                    ✅
+                </div>
+
+                <h3 id="resolvedIssues">
+                    -
+                </h3>
+
+                <p>
+                    Issues Resolved
+                </p>
+
+            </div>
+
+
+            <!-- Ideas -->
+
+            <div class="dashboard-card">
+
+                <div class="dashboard-icon">
+                    💡
+                </div>
+
+                <h3 id="totalIdeas">
+                    -
+                </h3>
+
+                <p>
+                    Ideas Received
+                </p>
+
+            </div>
+
+
+            <!-- Questions -->
+
+            <div class="dashboard-card">
+
+                <div class="dashboard-icon">
+                    ❓
+                </div>
+
+                <h3 id="totalQuestions">
+                    -
+                </h3>
+
+                <p>
+                    Questions Received
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div id="dashboardStatus">
+            Loading dashboard...
+        </div>
+
+    </div>
+
+</section>
+    <div class="feature-container">
+
+
+        <!-- ISSUE -->
+
+        <div class="card">
+
+            <div class="icon">
+                📝
+            </div>
+
+
+            <section id="issues" class="info-section">
+
+    <div class="info-content">
+
+        <h2>Report a Campus Issue</h2>
+
+        <p>
+            Tell us about a problem affecting student life.
+        </p>
+
+
+        <form id="issueForm">
+
+            <select id="category" required>
+
+                <option value="">
+                    Select Category
+                </option>
+
+                <option value="Wi-Fi">
+                    Wi-Fi
+                </option>
+
+                <option value="Classroom">
+                    Classroom
+                </option>
+
+                <option value="Library">
+                    Library
+                </option>
+
+                <option value="Cleanliness">
+                    Cleanliness
+                </option>
+
+                <option value="Drinking Water">
+                    Drinking Water
+                </option>
+
+                <option value="Sports">
+                    Sports
+                </option>
+
+                <option value="Electricity">
+                    Electricity
+                </option>
+
+                <option value="Other">
+                    Other
+                </option>
+
+            </select>
+
+
+            <input
+                type="text"
+                id="location"
+                placeholder="Where is the problem?"
+                required
+            >
+
+
+            <textarea
+                id="description"
+                placeholder="Describe the problem..."
+                required
+            ></textarea>
+
+
+            <button type="submit">
+                Submit Issue
+            </button>
+
+        </form>
+
+
+        <div id="result"></div>
+
+    </div>
+
+</section>
+
+
+
+        <!-- IDEA -->
+
+        <section id="ideas" class="info-section">
+
+    <div class="info-content">
+
+        <h2>Share Your Idea</h2>
+
+        <p>
+            Have an idea to improve student life?
+            Share it with us.
+        </p>
+
+
+        <form id="ideaForm">
+
+            <select id="ideaCategory" required>
+
+                <option value="">
+                    Select Category
+                </option>
+
+                <option value="Academic">
+                    Academic
+                </option>
+
+                <option value="Infrastructure">
+                    Infrastructure
+                </option>
+
+                <option value="Events">
+                    Events
+                </option>
+
+                <option value="Sports">
+                    Sports
+                </option>
+
+                <option value="Technology">
+                    Technology
+                </option>
+
+                <option value="Other">
+                    Other
+                </option>
+
+            </select>
+
+
+            <textarea
+                id="idea"
+                placeholder="Write your idea..."
+                required
+            ></textarea>
+
+
+            <button type="submit">
+                Submit Idea
+            </button>
+
+        </form>
+
+
+        <div id="ideaResult"></div>
+
+    </div>
+
+</section>
+<section id="questions" class="info-section">
+
+    <div class="info-content">
+
+        <h2>Ask a Question</h2>
+
+        <p>
+            Ask a question about campus life,
+            student facilities or our plans.
+        </p>
+
+
+        <form id="questionForm">
+
+            <textarea
+                id="question"
+                placeholder="Type your question..."
+                required
+            ></textarea>
+
+
+            <button type="submit">
+                Submit Question
+            </button>
+
+        </form>
+
+
+        <div id="questionResult"></div>
+
+    </div>
+
+</section>
+
+
+        <!-- QUESTION -->
+
+        <div class="card">
+
+            <div class="icon">
+                ❓
+            </div>
+
+
+            <h3>
+                Ask a Question
+            </h3>
+
+
+            <p>
+
+                Ask questions about
+                student-related matters.
+
+            </p>
+
+
+            <a href="#questions"
+               class="card-button">
+
+                Ask Question
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ISSUE SECTION -->
+
+<section id="issues"
+         class="info-section">
+
+    <div class="info-content">
+
+        <h2>
+            Report a Campus Issue
+        </h2>
+
+
+        <p>
+
+            Tell us about a problem
+            affecting student life.
+
+        </p>
+
+
+        <button onclick="comingSoon()">
+
+            Report a Problem
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- IDEAS -->
+
+<section id="ideas"
+         class="info-section alternate">
+
+    <div class="info-content">
+
+        <h2>
+            Student Ideas 💡
+        </h2>
+
+
+        <p>
+
+            Great campus improvements
+            can start with a simple idea.
+
+        </p>
+
+
+        <button onclick="comingSoon()">
+
+            Submit Your Idea
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- QUESTIONS -->
+
+<section id="questions"
+         class="info-section">
+
+    <div class="info-content">
+
+        <h2>
+            Ask a Question ❓
+        </h2>
+
+
+        <p>
+
+            Ask questions related to
+            student life and campus.
+
+        </p>
+
+
+        <button onclick="comingSoon()">
+
+            Ask Question
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- MANIFESTO -->
+
+<section id="manifesto"
+         class="manifesto">
+
+    <h2>
+        Vision & Manifesto
+    </h2>
+
+
+    <div class="manifesto-container">
+
+
+        <div>
+
+            <h3>
+                🎓 Better Communication
+            </h3>
+
+            <p>
+
+                Make it easier for students
+                to communicate their concerns
+                and suggestions.
+
+            </p>
+
+        </div>
+
+
+
+        <div>
+
+            <h3>
+                🏫 Better Campus
+            </h3>
+
+            <p>
+
+                Highlight important campus
+                issues and work toward
+                practical solutions.
+
+            </p>
+
+        </div>
+
+
+
+        <div>
+
+            <h3>
+                📊 Transparency
+            </h3>
+
+            <p>
+
+                Track the progress of issues
+                and proposals clearly.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h3>
+        Campus Pulse
+    </h3>
+
+
+    <p>
+        Your Campus. Your Voice.
+    </p>
+
+
+    <p class="copyright">
+        © 2026 Campus Pulse
+    </p>
+
+</footer>
+
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
