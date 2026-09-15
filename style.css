@@ -114,12 +114,12 @@ header {
 
 .hero {
     position: relative;
-    min-height: 600px;
+    min-height: 560px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 80px 24px;
+    padding: 70px 24px;
     overflow: hidden;
     background:
         radial-gradient(circle at 12% 20%, rgba(37, 99, 235, 0.10), transparent 28%),
@@ -162,9 +162,9 @@ header {
     max-width: 850px;
     margin: 0 auto 24px;
     color: var(--text);
-    font-size: clamp(46px, 6vw, 70px);
+    font-size: clamp(48px, 5vw, 58px);
     line-height: 1.05;
-    letter-spacing: -2.8px;
+    letter-spacing: -2.2px;
 }
 
 .hero h1 span {
@@ -175,7 +175,7 @@ header {
     max-width: 720px;
     margin: 0 auto 34px;
     color: var(--muted);
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.65;
 }
 
@@ -185,6 +185,10 @@ header {
     align-items: center;
     gap: 13px;
     flex-wrap: wrap;
+}
+
+.hero-buttons .btn {
+    min-width: 180px;
 }
 
 .btn,
@@ -702,7 +706,7 @@ footer .copyright {
     }
 
     .hero-buttons {
-        width: min(100%, 350px);
+        width: min(100%, 380px);
         margin: auto;
         flex-direction: column;
         gap: 10px;
