@@ -828,3 +828,55 @@ footer .copyright {
         grid-template-columns: 1fr;
     }
 }
+
+/* =========================================
+   SMALL ISSUES REPORTED CARD ONLY
+   ========================================= */
+
+/* Desktop / PC */
+.dashboard-grid > .dashboard-card:nth-child(2) {
+    width: 180px !important;
+    min-height: 150px !important;
+    padding: 20px !important;
+    margin: 0 auto !important;
+    border-radius: 18px !important;
+}
+
+.dashboard-grid > .dashboard-card:nth-child(2) .dashboard-icon {
+    font-size: 28px !important;
+    margin-bottom: 8px !important;
+}
+
+.dashboard-grid > .dashboard-card:nth-child(2) h3 {
+    font-size: 30px !important;
+    margin: 5px 0 !important;
+}
+
+.dashboard-grid > .dashboard-card:nth-child(2) p {
+    font-size: 14px !important;
+    margin: 0 !important;
+}
+
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .dashboard-grid > .dashboard-card:nth-child(2) {
+        width: 155px !important;
+        min-height: 125px !important;
+        padding: 15px !important;
+        margin: 0 auto !important;
+    }
+
+    .dashboard-grid > .dashboard-card:nth-child(2) .dashboard-icon {
+        font-size: 24px !important;
+    }
+
+    .dashboard-grid > .dashboard-card:nth-child(2) h3 {
+        font-size: 26px !important;
+    }
+
+    .dashboard-grid > .dashboard-card:nth-child(2) p {
+        font-size: 13px !important;
+    }
+}
