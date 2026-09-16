@@ -1335,6 +1335,7 @@ footer {
     font-weight: 1100;
     color: #111827;
     margin: 0 0 10px;
+   transform: translateY(-20px);
 }
 
 .track-description {
