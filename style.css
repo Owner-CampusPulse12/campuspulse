@@ -1575,3 +1575,144 @@ footer {
     height: 55px;
   }
 }
+
+/* =========================================
+   TRACK ISSUE - RESPONSIVE PROFESSIONAL FIX
+   ========================================= */
+
+#track {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 70px 5%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* Track card */
+#track > div {
+    box-sizing: border-box;
+}
+
+/* Heading */
+#track h1,
+#track h2 {
+    text-align: center;
+    line-height: 1.2;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
+}
+
+/* Description */
+#track p {
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* Input + Track button area */
+#track input {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+#track button {
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+/* =========================================
+   LAPTOP / DESKTOP
+   ========================================= */
+
+@media (min-width: 769px) {
+
+    #track {
+        padding: 80px 6%;
+    }
+
+    #track h1,
+    #track h2 {
+        font-size: 42px;
+    }
+
+    #track p {
+        font-size: 17px;
+    }
+
+    #track input {
+        width: 360px;
+        height: 58px;
+    }
+
+    #track button {
+        height: 58px;
+        padding: 0 30px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    #track {
+        width: 100%;
+        max-width: 100%;
+        padding: 45px 20px;
+        margin: 0;
+    }
+
+    #track h1,
+    #track h2 {
+        font-size: 30px;
+        line-height: 1.25;
+        margin-bottom: 18px;
+    }
+
+    #track p {
+        width: 100%;
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 25px;
+    }
+
+    #track input {
+        width: 100%;
+        max-width: 100%;
+        height: 55px;
+        margin-bottom: 12px;
+    }
+
+    #track button {
+        width: 100%;
+        max-width: 100%;
+        height: 55px;
+    }
+}
+
+
+/* =========================================
+   SMALL PHONES
+   ========================================= */
+
+@media (max-width: 400px) {
+
+    #track {
+        padding: 35px 15px;
+    }
+
+    #track h1,
+    #track h2 {
+        font-size: 27px;
+    }
+
+    #track p {
+        font-size: 14px;
+    }
+}
