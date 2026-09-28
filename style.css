@@ -1716,3 +1716,94 @@ footer {
         font-size: 14px;
     }
 }
+/* ===== FIX RESPONSIVE PAGE WIDTH ===== */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Track section */
+#track {
+    width: 100%;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Track content */
+#track input {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+#track button {
+    box-sizing: border-box;
+    white-space: nowrap;
+}
+
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 768px) {
+
+    #track {
+        width: 100%;
+        padding: 40px 18px;
+    }
+
+    #track h1,
+    #track h2 {
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+        font-size: 30px;
+        line-height: 1.25;
+    }
+
+    #track p {
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    #track input {
+        width: 100%;
+        max-width: 100%;
+        height: 55px;
+    }
+
+    #track button {
+        max-width: 100%;
+        height: 55px;
+    }
+}
+
+
+/* ===== VERY SMALL PHONES ===== */
+
+@media (max-width: 400px) {
+
+    #track {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    #track h1,
+    #track h2 {
+        font-size: 27px;
+    }
+}
+
